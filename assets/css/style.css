@@ -1,0 +1,342 @@
+/* ---------------------------------- */
+/* ESTILOS GLOBALES Y SELECTOR      */
+/* assets/css/style.css             */
+/* ---------------------------------- */
+
+/* --- Variables de Color (Paleta D'Frutilac) --- */
+:root {
+    --color-verde: #22c55e;
+    --color-verde-oscuro: #16a34a;
+    --color-amarillo: #f59e0b;
+    --color-amarillo-oscuro: #d97706;
+    --color-naranja: #f97316;
+    --color-naranja-oscuro: #ea580c;
+    --color-oscuro: #374151;
+    --color-gris: #6b7280;
+    --color-gris-claro: #f3f4f6;
+    --color-blanco: #ffffff;
+    --color-fondo: #fefdfb; /* Blanco cálido */
+    
+    --fuente-principal: 'Nunito', sans-serif;
+}
+
+/* --- Reseteo Básico y Tipografía --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-oscuro);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-verde);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-verde-oscuro);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* PÁGINA SELECTORA (index.html)    */
+/* ---------------------------------- */
+.selector-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+}
+
+.selector-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.selector-logo {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.selector-tagline {
+    font-size: 1.25rem;
+    color: var(--color-gris);
+    margin-top: 0.5rem;
+}
+
+.selector-main {
+    width: 100%;
+    max-width: 1000px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.selector-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-oscuro);
+}
+
+.selector-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .selector-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+}
+
+.selector-card {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 500px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+}
+
+.selector-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Imágenes de Fondo (Selector) --- */
+.card-venezuela {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/selector-vz.jpg');
+}
+.card-internacional {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/selector-int.jpg');
+}
+/* ------------------------------------ */
+
+.selector-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: var(--color-blanco);
+    text-align: center;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+
+.selector-card:hover .selector-card__content {
+    transform: translateY(-10px);
+}
+
+.selector-card__title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.selector-card__description {
+    font-size: 1.15rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.selector-card__button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: var(--color-blanco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-venezuela .selector-card__button {
+    color: var(--color-verde);
+}
+.card-internacional .selector-card__button {
+    color: var(--color-naranja);
+}
+
+.selector-card:hover .selector-card__button {
+    transform: scale(1.05);
+}
+
+.selector-footer {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+
+/* ---------------------------------- */
+/* FOOTER (Global)                  */
+/* ---------------------------------- */
+.main-footer {
+    background-color: var(--color-oscuro);
+    color: #cbd5e1;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.main-footer a {
+    color: var(--color-blanco);
+    font-weight: 700;
+}
+
+.main-footer a:hover {
+    color: var(--color-amarillo);
+}
+
+
+/* ---------------------------------- */
+/* BOTONES FLOTANTES (Global)       */
+/* ---------------------------------- */
+.floating-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    z-index: 100;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+.floating-btn svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: var(--color-blanco);
+}
+
+.whatsapp-btn {
+    left: 1.5rem;
+    background-color: #25D366;
+}
+
+.scroll-top-btn {
+    right: 1.5rem;
+    background-color: var(--color-amarillo);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn svg {
+    color: var(--color-oscuro);
+}
+
+/* ---------------------------------- */
+/* ESTILOS WIDGET GOOGLE TRANSLATE  */
+/* ---------------------------------- */
+
+/* Ocultar la barra superior de Google */
+body {
+    top: 0 !important;
+}
+.skiptranslate {
+    display: none !important;
+} 
+iframe.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Estilizar el contenedor del dropdown */
+#google_translate_element {
+    display: inline-block;
+}
+
+/* Estilizar el dropdown en sí */
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 0.75rem !important;
+    cursor: pointer;
+    font-family: var(--fuente-principal) !important;
+    transition: border-color 0.3s ease;
+}
+
+.goog-te-gadget-simple:hover {
+    border-color: var(--color-gris) !important;
+}
+
+/* Estilizar el texto e icono */
+.goog-te-gadget-simple .goog-te-menu-value {
+    color: var(--color-oscuro) !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    padding-right: 0.5rem !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    display: flex;
+    align-items: center;
+}
+.goog-te-gadget-simple .goog-te-menu-value span::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='%23374151'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c-1.3 0-2.55-.188-3.75-.534m3.75.534c-1.2 0-2.398-.188-3.648-.534M12 21c1.3 0 2.55.188 3.75.534m-3.75-.534c1.2 0 2.398.188 3.648-.534M9.006 15.341c.883.62 1.9 1.025 3 1.025s2.117-.405 3-1.025m-6 0c.883.62 1.9 1.025 3 1.025s2.117-.405 3-1.025m-6 0a8.966 8.966 0 01-3.648-.534M15.006 15.341c-.883.62-1.9 1.025-3 1.025s-2.117-.405-3-1.025m6 0c-.883.62-1.9 1.025-3 1.025s-2.117-.405-3-1.025m6 0a8.966 8.966 0 003.648-.534M3.256 9.253c.883-.62 1.9-1.025 3-1.025s2.117.405 3 1.025m-6 0c.883-.62 1.9-1.025 3-1.025s2.117.405 3 1.025m-6 0a8.966 8.966 0 01-3.648.534M15.006 8.228c-.883-.62-1.9-1.025-3-1.025s-2.117.405-3-1.025m6 0c-.883-.62-1.9-1.025-3-1.025s-2.117.405-3-1.025m6 0a8.966 8.966 0 003.648.534M3 9.006c.62.883 1.025 1.9 1.025 3s-.405 2.117-1.025 3m0-6c.62.883 1.025 1.9 1.025 3s-.405 2.117-1.025 3m0 0c.62.883 1.025 1.9 1.025 3s-.405 2.117-1.025 3M21 9.006c-.62.883-1.025 1.9-1.025 3s.405 2.117 1.025 3m0-6c-.62.883-1.025 1.9-1.025 3s.405 2.117 1.025 3m0 0c-.62.883-1.025 1.9-1.025 3s.405 2.117 1.025 3' /%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.5rem;
+}
+.goog-te-gadget-simple .goog-te-menu-value span img {
+    display: none !important; /* Ocultar icono de flecha de Google */
+}

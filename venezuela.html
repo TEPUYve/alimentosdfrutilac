@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Frutilac Venezuela - Sabor Natural</title>
+    
+    <!-- Google Fonts (Nunito) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body class="landing-page landing-vz">
+
+    <!-- Header (Venezuela) -->
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/img/logo.png" alt="D'Frutilac Venezuela">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#vz-conocenos" class="nav-link">Conócenos</a></li>
+                <li><a href="#vz-productos" class="nav-link">Productos</a></li>
+                <li><a href="#vz-contactos" class="nav-link">Contactos</a></li>
+            </ul>
+            
+            <!-- Contenedor del Traductor de Google -->
+            <div id="google_translate_element" class="translate-widget"></div>
+        </nav>
+    </header>
+
+    <!-- Main (Venezuela) -->
+    <main>
+        <!-- Hero Section -->
+        <section id="vz-hero" class="hero-section hero-vz">
+            <div class="hero-content">
+                <h1 class="hero-title">El Sabor que Conoces</h1>
+                <p class="hero-subtitle">La calidad que prefieres, siempre en tu mesa.</p>
+                <a href="#vz-productos" class="hero-cta">Ver Productos</a>
+            </div>
+        </section>
+        
+        <!-- Conócenos -->
+        <section id="vz-conocenos" class="content-section container">
+            <div class="content-image">
+                <img src="assets/img/conocenos-vz.jpg" alt="Planta D'Frutilac Venezuela">
+            </div>
+            <div class="content-text">
+                <span class="content-subtitle">Conócenos</span>
+                <h2 class="content-title">Pasión por la fruta venezolana</h2>
+                <p>En Alimentos D'Frutilac, C.A., llevamos décadas seleccionando la mejor fruta de nuestros campos para llevar a tu hogar productos 100% naturales, llenos de sabor y frescura.</p>
+                <p>Nuestro compromiso es con la calidad y con las familias venezolanas, ofreciendo jugos y pulpas que nutren y deleitan.</p>
+            </div>
+        </section>
+        
+        <!-- Productos -->
+        <section id="vz-productos" class="products-section">
+            <div class="container">
+                <span class="content-subtitle text-center">Catálogo Nacional</span>
+                <h2 class="content-title text-center">Nuestra Línea de Productos</h2>
+                
+                <div class="product-grid">
+                    <!-- Producto 1: Naranja -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/img/vz-producto-naranja.png" alt="Naranjada D'Frutilac">
+                        </div>
+                        <h3 class="product-card__title">Naranjada</h3>
+                        <p class="product-card__description">El jugo de naranja refrescante, listo para tomar.</p>
+                    </div>
+                    <!-- Producto 2: Papelón -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/img/vz-producto-papelon.png" alt="Papelón con Limón D'Frutilac">
+                        </div>
+                        <h3 class="product-card__title">Papelón con Limón</h3>
+                        <p class="product-card__description">La tradición venezolana en su máxima expresión.</p>
+                    </div>
+                    <!-- Producto 3: Tetero -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/img/vz-producto-tetero.png" alt="Jugo de Tetero D'Frutilac">
+                        </div>
+                        <h3 class="product-card__title">Jugo de Tetero</h3>
+                        <p class="product-card__description">El sabor clásico que nos une como familia.</p>
+                    </div>
+                    <!-- Producto 4: Fresa -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="assets/img/vz-producto-fresa.png" alt="Pulpa de Fresa D'Frutilac">
+                        </div>
+                        <h3 class="product-card__title">Pulpa de Fresa</h3>
+                        <p class="product-card__description">Pura fruta, ideal para jugos y postres.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contactos -->
+        <section id="vz-contactos" class="contact-section container">
+            <div class="contact-form-container">
+                <span class="content-subtitle">Contáctanos</span>
+                <h2 class="content-title">¿Hablamos?</h2>
+                <p>Estamos listos para atender tus pedidos o resolver tus dudas.</p>
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Nombre Completo" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                    <button type="submit" class="hero-cta">Enviar Mensaje</button>
+                </form>
+            </div>
+            
+            <div class="contact-map-container">
+                <!-- Mapa de Google: Fábrica -->
+                <h3 class="map-title">Nuestra Fábrica</h3>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.966055088683!2d-69.26843489017097!3d10.019659872656371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f327dac0645%3A0x55325ccea3b05579!2sAlimentos%20D&#39;frutilac%20CA!5e0!3m2!1ses-419!2sve!4v1762907991452!5m2!1ses-419!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <!-- Mapa de Google: Oficina -->
+                <h3 class="map-title">Oficinas Ejecutivas</h3>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.451960338364!2d-69.28781939017051!3d10.062003771924783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875d885a2ab063%3A0xffd276ce025958fe!2sTorre%20BEL%2C%20Barquisimeto%203001%2C%20Lara!5e0!3m2!1ses-419!2sve!4v1762908047524!5m2!1ses-419!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer (Venezuela) -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>
+                by TEPUY | All rights reserved © Copyright 2025 - 
+                <a href="https://tepuy.site/" target="_blank" rel="noopener noreferrer">TEPUY</a>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Botones Flotantes -->
+    <a id="whatsappBtn" href="https://api.whatsapp.com/send?phone=584121234567" target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp-btn" aria-label="Contactar por WhatsApp">
+        <!-- Reemplazar con tu SVG o Icon Font -->
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.078 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.414z"/></svg>
+    </a>
+    
+    <button id="scrollTopBtn" class="floating-btn scroll-top-btn" aria-label="Volver al inicio">
+        <!-- Reemplazar con tu SVG o Icon Font -->
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+    
+    <!-- Scripts -->
+    <!-- Script de Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'es,en,pt,zh-CN', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Script Principal -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
