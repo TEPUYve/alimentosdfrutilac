@@ -53,11 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // --- 3. LÓGICA PARA GOOGLE TRANSLATE WIDGET ---
-    // El script de Google se encarga de la inicialización
-    // a través de la función `googleTranslateElementInit` en el HTML.
     
-    // Opcional: Pequeño hack para mejorar la apariencia del dropdown
-    // Google puede tardar en cargar, usamos un intervalo
     const checkGoogleTranslate = setInterval(() => {
         const translateSelect = document.querySelector('.goog-te-gadget-simple');
         if (translateSelect) {
@@ -74,7 +70,68 @@ document.addEventListener("DOMContentLoaded", function() {
             logos.forEach(logo => {
                 logo.classList.add('notranslate');
             });
+
+            // Forzamos a que no se traduzca el texto del footer
+            const footerText = document.querySelector('.main-footer p');
+            if (footerText) {
+                footerText.classList.add('notranslate');
+            }
         }
     }, 500);
+
+    // --- 4. LÓGICA PARA ENVÍO DE FORMULARIOS A WHATSAPP ---
+    
+    // Función para Venezuela
+    window.enviarWhatsAppVz = function() {
+        const form = document.getElementById('contactFormVz');
+        if (!form) return;
+        
+        const name = form.querySelector('input[name="name"]').value;
+        const email = form.querySelector('input[name="email"]').value;
+        const message = form.querySelector('textarea[name="message"]').value;
+        
+        // Validación básica
+        if (!name || !email || !message) {
+            alert('Por favor, complete todos los campos del formulario.');
+            return;
+        }
+        
+        const whatsappMessage = `*Nuevo Mensaje desde D'Frutilac Venezuela*%0A%0A*Nombre:* ${name}%0A*Email:* ${email}%0A*Mensaje:* ${message}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=584125359915&text=${whatsappMessage}`;
+        
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // Función para Internacional
+    window.enviarWhatsAppInt = function() {
+        const form = document.getElementById('contactFormInt');
+        if (!form) return;
+        
+        const name = form.querySelector('input[name="name"]').value;
+        const company = form.querySelector('input[name="company"]').value;
+        const email = form.querySelector('input[name="email"]').value;
+        const message = form.querySelector('textarea[name="message"]').value;
+        
+        // Validación básica
+        if (!name || !company || !email || !message) {
+            alert('Please fill in all form fields.');
+            return;
+        }
+        
+        const whatsappMessage = `*New Message from D'Frutilac Global*%0A%0A*Name:* ${name}%0A*Company:* ${company}%0A*Email:* ${email}%0A*Message:* ${message}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=584125359915&text=${whatsappMessage}`;
+        
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // --- 5. MEJORA: PREVENIR ENVÍO DE FORMULARIOS CON ENTER ---
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+            }
+        });
+    });
 
 });
